@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-success"> <div class="container-fluid"> <a class="navbar-brand d-flex align-items-center" routerLink="/">
+      <img src="assets/images/logo.png" alt="Logo Fahsi Lounge" class="img-fluid me-2" style="max-height: 80px;"> 
+      <span class="d-none d-md-block fs-4 fw-bold">Fahsi Lounge</span> </a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        
+        <li class="nav-item">
+          <a class="nav-link" 
+             routerLink="/" 
+             routerLinkActive="active" 
+             [routerLinkActiveOptions]="{exact: true}">Home</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/copas" routerLinkActive="active">Copas</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/cervezas" routerLinkActive="active">Cervezas</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/cacahimbas" routerLinkActive="active">Cacahimbas</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/juegos" routerLinkActive="active">Juegos</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
