@@ -1,1 +1,33 @@
-<p>cachimbas works!</p>
+<div class="glass-rectangle">
+  
+  <h1 class="text-center fw-bold mb-4">Carta de Cachimbas</h1>
+
+  <div *ngIf="cachimbas$ | async as cachimbas; else loading">
+    
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Sabor</th>
+          <th scope="col" class="text-end">Precio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cachimba of cachimbas">
+          <td>
+            <div class="fw-bold">{{ cachimba.nombre }}</div>
+            <div class="text-white-50 small">{{ cachimba.descripcion }}</div>
+          </td>
+          <td class="text-end fw-bold align-middle">
+            {{ cachimba.precio | currency:'EUR' }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <ng-template #loading>
+    <p class="text-center">Cargando carta...</p>
+  </ng-template>
+
+</div>

@@ -1,1 +1,33 @@
-<p>cervezas works!</p>
+<div class="glass-rectangle">
+  
+  <h1 class="text-center fw-bold mb-4">Carta de Cervezas</h1>
+
+  <div *ngIf="cervezas$ | async as cervezas; else loading">
+    
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Nombre</th>
+          <th scope="col" class="text-end">Precio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cerveza of cervezas">
+          <td>
+            <div class="fw-bold">{{ cerveza.nombre }}</div>
+            <div class="text-white-50 small">{{ cerveza.descripcion }}</div>
+          </td>
+          <td class="text-end fw-bold align-middle">
+            {{ cerveza.precio | currency:'EUR' }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <ng-template #loading>
+    <p class="text-center">Cargando carta...</p>
+  </ng-template>
+
+</div>

@@ -1,33 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+
 @import "bootstrap/dist/css/bootstrap.min.css";
 
-/* --- Importación de Fuente Moderna --- */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-/* --- Estilos Globales --- */
+
 body {
-  /* La nueva fuente para toda la app */
+  
   font-family: 'Poppins', sans-serif; 
   
-  /* Un fondo oscuro para que el efecto cristal resalte */
-  /* Puedes cambiar esto por una imagen: background-image: url('/assets/mi-fondo.jpg'); */
+  
+  
   background: linear-gradient(to bottom right, #343a40, #1a1d20);
-  background-attachment: fixed; /* Fija el fondo */
+  background-attachment: fixed; 
 
-  /* Color de texto claro por defecto */
+  
   color: #f8f9fa;
 }
 
-/* Esto es CRUCIAL.
-  Como el header será 'sticky' (fijo arriba), necesitamos empujar
-  el contenido principal hacia abajo para que no quede oculto.
-*/
+
 main {
-  /* Esto ya lo tenías para el header */
+  
   padding-top: 120px; 
  
-  /* --- AÑADE ESTA LÍNEA --- */
-  /* Este es el "margen" para el footer.
-     (Ajusta 120px si tu footer es más alto o bajo) */
+  
+  
   padding-bottom: 100px;
 }

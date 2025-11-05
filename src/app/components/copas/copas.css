@@ -1,0 +1,42 @@
+.glass-rectangle {
+  
+  background: rgba(255, 255, 255, 0.05); 
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  
+  
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  
+  
+  padding: 2.5rem;
+  margin: 1rem auto; 
+  max-width: 900px; 
+}
+
+
+
+
+.table {
+  
+  --bs-table-bg: transparent;
+  --bs-table-color: #f8f9fa; 
+  --bs-table-border-color: rgba(255, 255, 255, 0.15);
+  font-size: 1.1rem;
+}
+
+
+.table-hover > tbody > tr:hover > * {
+  --bs-table-hover-bg: rgba(255, 255, 255, 0.1);
+  --bs-table-hover-color: #f8f9fa;
+}
+
+
+.table thead th {
+  color: #ffffff;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.9rem;
+}

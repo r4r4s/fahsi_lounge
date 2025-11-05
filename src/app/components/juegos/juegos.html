@@ -1,1 +1,38 @@
-<p>juegos works!</p>
+<div class="glass-rectangle">
+  
+  <h1 class="text-center fw-bold mb-4">Juegos de Mesa</h1>
+
+  <div *ngIf="juegos$ | async as juegos; else loading">
+    
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Juego</th>
+          <th scope="col" class="text-end">Precio </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let juego of juegos">
+          <td>
+            <div class="fw-bold">{{ juego.nombre }}</div>
+            <div class="text-white-50 small">{{ juego.descripcion }}</div>
+          </td>
+          <td class="text-end fw-bold align-middle">
+            <span *ngIf="juego.precio > 0; else gratis">
+              {{ juego.precio | currency:'EUR' }}
+            </span>
+            <ng-template #gratis>
+              <span class="text-success">Gratis</span>
+            </ng-template>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <ng-template #loading>
+    <p class="text-center">Cargando lista de juegos...</p>
+  </ng-template>
+
+</div>

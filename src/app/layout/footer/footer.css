@@ -1,29 +1,29 @@
 footer {
-  /* --- AÑADIDO: Posicionamiento Fijo --- */
+  
   position: fixed;
   bottom: 0;
   width: 100%;
   z-index: 1030;
-  transform: translateZ(0); /* Para evitar el parpadeo (glitch) */
+  transform: translateZ(0); 
 
-  /* 1. Fondo (el verde que pediste) */
+  
   background: rgba(27, 84, 49, 0.55);
   
-  /* 2. El difuminado */
+  
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   
-  /* 3. Borde superior */
+  
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 
-  /* 4. Sombra hacia arriba */
+  
   box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.2);
 
-  /* Padding interno */
+  
   padding-top: 1rem;
   padding-bottom: 1rem;
 
-  /* Estilos del texto */
+  
   color: #f8f9fa;
   text-align: center;
 }

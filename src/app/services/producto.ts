@@ -1,46 +1,52 @@
 import { Injectable } from '@angular/core';
-import { Producto } from '../models/producto'; // Importamos nuestro modelo
-import { of, Observable } from 'rxjs'; // 'of' nos permite simular un Observable
+import { Producto } from '../models/producto';
+import { of, Observable } from 'rxjs';
+import { map } from 'rxjs/operators'; 
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductoService {
 
-  // Datos simulados (Mock Data)
+  
   private productosMock: Producto[] = [
-    {
-      id: 1,
-      nombre: 'Cerveza Tostada',
-      descripcion: 'Cerveza artesanal de la casa.',
-      precio: 4.50,
-      categoria: 'Copa'
-    },
-    {
-      id: 2,
-      nombre: 'Patatas Bravas',
-      descripcion: 'Las clásicas, con nuestra salsa secreta.',
-      precio: 6.00,
-      categoria: 'Cerveza'
-    },
-    {
-      id: 3,
-      nombre: 'Hamburguesa de la Casa',
-      descripcion: '200g de ternera, queso cheddar y bacon.',
-      precio: 12.50,
-      categoria: 'Cachimba'
-    },
-    {
-      id: 4,
-      nombre: 'Juego de Mesa',
-      descripcion: 'Un divertido juego de mesa para toda la familia.',
-      precio: 29.99,
-      categoria: 'Juego'
-    }
+    
+    { id: 1, nombre: 'Cerveza Tostada', descripcion: 'Artesanal.', precio: 4.50, categoria: 'Cerveza' },
+    { id: 2, nombre: 'Cerveza Rubia', descripcion: 'Suave.', precio: 3.50, categoria: 'Cerveza' },
+    { id: 3, nombre: 'Cerveza Negra', descripcion: 'Intensa.', precio: 5.00, categoria: 'Cerveza' },
+    
+
+    
+    
+    { id: 5, nombre: 'Gin Tonic (Beefeater)', descripcion: 'Clásico.', precio: 8.00, categoria: 'Copa' },
+    { id: 6, nombre: 'Ron Cola (Barceló)', descripcion: 'El de siempre.', precio: 8.00, categoria: 'Copa' },
+    { id: 7, nombre: 'Whisky (Jameson)', descripcion: 'Solo o con hielo.', precio: 9.00, categoria: 'Copa' },
+    { id: 8, nombre: 'Mojito', descripcion: 'Fresco y mentolado.', precio: 10.00, categoria: 'Copa' },
+
+    
+    { id: 9, nombre: 'Cachimba Frutal', descripcion: 'Sabor a frutas mixtas.', precio: 15.00, categoria: 'Cachimba' },
+    { id: 10, nombre: 'Cachimba Menta', descripcion: 'Refrescante sabor a menta.', precio: 15.00, categoria: 'Cachimba' },
+    { id: 11, nombre: 'Cachimba Vainilla', descripcion: 'Dulce sabor a vainilla.', precio: 15.00, categoria: 'Cachimba' },
+
+    
+    { id: 12, nombre: 'Cartas', descripcion: 'Baraja española.', precio: 5.00, categoria: 'Juego' },
+    { id: 13, nombre: 'Dominó', descripcion: 'Juego clásico de fichas.', precio: 7.00 , categoria: 'Juego' },
+    { id: 14, nombre: 'Ajedrez', descripcion: 'Juego de estrategia.', precio: 10.00, categoria: 'Juego' },
   ];
 
   constructor() { }
+
+
   getProductos(): Observable<Producto[]> {
     return of(this.productosMock);
+  }
+
+
+  getProductosPorCategoria(categoria: string): Observable<Producto[]> {
+    return this.getProductos().pipe(
+      map(productos => 
+        productos.filter(p => p.categoria === categoria)
+      )
+    );
   }
 }
