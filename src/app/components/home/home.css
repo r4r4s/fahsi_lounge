@@ -1,0 +1,139 @@
+.hero-section {
+  /* Ruta a tu imagen de fondo */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/assets/home.jpg');
+  background-size: cover; /* Cubre toda la sección */
+  background-position: center; /* Centra la imagen */
+  background-attachment: fixed; /* La imagen se mantiene fija al hacer scroll (efecto parallax) */
+  
+  height: 80vh; /* Ocupa el 80% del alto de la ventana */
+  min-height: 500px; /* Altura mínima para pantallas pequeñas */
+  
+  display: flex; /* Asegura que Flexbox funcione para centrar el contenido */
+  flex-direction: column; /* Apila el contenido verticalmente */
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra horizontalmente */
+  
+  /* Esto es importante para que el texto sea legible sobre la imagen */
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para el texto */
+  
+  /* Borde redondeado sutil si te gusta (opcional) */
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+/* --- Estilos para las Tarjetas de Cristal --- */
+
+.glass-card {
+  /* 1. El efecto cristal */
+  background: rgba(255, 255, 255, 0.05); /* Un fondo blanco muy sutil */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  
+  /* 2. Borde y Sombra */
+  border-radius: 12px; /* Esquinas redondeadas */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  
+  /* 3. Animación 'moderna' */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  /* Asegura que el contenido (imagen) respete los bordes */
+  overflow: hidden; 
+}
+
+/* Efecto al pasar el ratón */
+.glass-card:hover {
+  transform: translateY(-10px); /* Se eleva un poco */
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo de la imagen de la tarjeta */
+.glass-card .card-img-top {
+  /* Hacemos que todas las imágenes sean cuadradas y se ajusten */
+  aspect-ratio: 1 / 1; 
+  object-fit: cover; /* Recorta la imagen para que encaje, sin deformarla */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Estilo del cuerpo de la tarjeta */
+.glass-card .card-body {
+  color: #f8f9fa; /* Texto claro */
+  
+  /* --- AÑADIDO: Padding dentro de la tarjeta --- */
+  padding: 1.5rem;
+}
+
+/* --- AÑADIDO: Margen entre título y botón --- */
+.glass-card .card-title {
+  margin-bottom: 1rem;
+}
+
+/* Estilo del botón */
+.glass-card .btn-outline-light {
+  border-radius: 20px; /* Botones redondeados */
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.glass-card .btn-outline-light:hover {
+  background-color: #ffffff;
+  color: #1a1d20; /* Color oscuro del fondo al pasar el ratón */
+}
+
+.hero-section h1 {
+  font-size: 3.5rem; /* Tamaño de la fuente del título */
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.hero-section p.lead {
+  font-size: 1.5rem; /* Tamaño de la fuente del subtítulo */
+  max-width: 700px; /* Limita el ancho del texto */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- Animaciones sutiles --- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animated-fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.animated-slide-up {
+  animation: slideUp 1s ease-out forwards;
+  animation-delay: 0.5s; /* Retrasa un poco la animación del párrafo */
+  opacity: 0; /* Asegura que esté oculto al principio */
+}
+
+/* --- Responsive para el tamaño del texto --- */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 60vh; /* Menos alto en móviles */
+    min-height: 400px;
+  }
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+  .hero-section p.lead {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+  .hero-section p.lead {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,84 @@
+/* --- Hacemos que el header flote --- */
+:host {
+  position: fixed; /* <-- Esta es la propiedad clave que lo fija */
+  top: 0;          /* Lo pega a la parte de arriba */
+  z-index: 1030;   /* Se asegura de que esté por encima de todo */
+  width: 100%;     /* Hace que ocupe todo el ancho */
+
+  /* Esto lo mantuvimos para evitar el 'glitch' visual al cambiar de página */
+  transform: translateZ(0); 
+}
+
+/* --- El Efecto Cristal (Glassmorphism) --- */
+.navbar {
+  /* 1. Fondo semi-transparente oscuro */
+  background: rgba(27, 84, 49, 0.55);
+  
+  /* 2. El difuminado del fondo */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px); /* Para Safari */
+  
+  /* 3. Un borde sutil que captura la luz */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  /* 4. Sombra suave para dar profundidad */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+
+  /* Ajustes de padding */
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+/* --- El "Nombre Bonito" (Logo y Texto) --- */
+.brand-logo {
+  max-height: 55px; /* Ajusta el tamaño de tu logo */
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover .brand-logo {
+  transform: scale(1.1); /* Efecto al pasar el ratón */
+}
+
+.brand-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem; /* Tamaño de fuente grande */
+  font-weight: 700; /* Negrita */
+  color: #ffffff;
+  letter-spacing: -1px; /* Letras un poco más juntas */
+}
+
+/* --- Los Nombres del Menú (Copas, Cervezas...) --- */
+.navbar-nav .nav-link {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8); /* Blanco semi-transparente */
+  margin: 0 0.25rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px; /* Esquinas redondeadas */
+  transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el ratón */
+.navbar-nav .nav-link:hover:not(.active) {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Enlace activo (la página actual) */
+.navbar-nav .nav-link.active {
+  font-weight: 600; /* Más negrita */
+  color: #ffffff;
+  /* Un fondo sutil para el enlace activo */
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Estilo del botón hamburguesa en móviles */
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.navbar-toggler-icon {
+  /* Esto hace que el icono de la hamburguesa sea blanco */
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}

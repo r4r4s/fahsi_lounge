@@ -1,37 +1,55 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-success"> <div class="container-fluid"> <a class="navbar-brand d-flex align-items-center" routerLink="/">
-      <img src="assets/images/logo.png" alt="Logo Fahsi Lounge" class="img-fluid me-2" style="max-height: 80px;"> 
-      <span class="d-none d-md-block fs-4 fw-bold">Fahsi Lounge</span> </a>
-    
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+
+    <a class="navbar-brand d-flex align-items-center" routerLink="/">
+      <img src="assets/image.png" alt="Logo Fahsi Lounge" class="brand-logo me-3">
+      
+      <span class="brand-text d-none d-lg-inline">Fahsi Lounge</span>
+      <!--<span class="brand-text">Fahsi Lounge</span> -->
+      </a>
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
-    
+
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        
         <li class="nav-item">
           <a class="nav-link" 
              routerLink="/" 
              routerLinkActive="active" 
-             [routerLinkActiveOptions]="{exact: true}">Home</a>
+             [routerLinkActiveOptions]="{exact: true}" 
+             data-bs-toggle="collapse" 
+             data-bs-target="#navbarNav">Home</a>
         </li>
-        
         <li class="nav-item">
-          <a class="nav-link" routerLink="/copas" routerLinkActive="active">Copas</a>
+          <a class="nav-link" 
+             routerLink="/copas" 
+             routerLinkActive="active" 
+             data-bs-toggle="collapse" 
+             data-bs-target="#navbarNav">Copas</a>
         </li>
-
         <li class="nav-item">
-          <a class="nav-link" routerLink="/cervezas" routerLinkActive="active">Cervezas</a>
+          <a class="nav-link" 
+             routerLink="/cervezas" 
+             routerLinkActive="active" 
+             data-bs-toggle="collapse" 
+             data-bs-target="#navbarNav">Cervezas</a>
         </li>
-
         <li class="nav-item">
-          <a class="nav-link" routerLink="/cacahimbas" routerLinkActive="active">Cacahimbas</a>
+          <a class="nav-link" 
+             routerLink="/cacahimbas" 
+             routerLinkActive="active" 
+             data-bs-toggle="collapse" 
+             data-bs-target="#navbarNav">Cacahimbas</a>
         </li>
-
         <li class="nav-item">
-          <a class="nav-link" routerLink="/juegos" routerLinkActive="active">Juegos</a>
+          <a class="nav-link" 
+             routerLink="/juegos" 
+             routerLinkActive="active" 
+             data-bs-toggle="collapse" 
+             data-bs-target="#navbarNav">Juegos</a>
         </li>
-
       </ul>
     </div>
   </div>
