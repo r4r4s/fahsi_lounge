@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build"
+  publish = "dist/fahsi/browser"
+
+[[plugins]]
+  package = "@netlify/angular-runtime"
+
+# 🔄 Redirección para Single Page Applications (Angular)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
