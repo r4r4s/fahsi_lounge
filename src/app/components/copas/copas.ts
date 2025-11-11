@@ -16,7 +16,7 @@ import { ProductoService } from '../../services/producto';
 })
 export class Copas implements OnInit {
 
-  private readonly subcategorias = ['Whisky', 'Gin', 'Vodka', 'Ron', 'Licores'] as const;
+  private readonly subcategorias = ['Whisky', 'Gin', 'Vodka', 'Ron', 'Licores', 'Chupitos'] as const;
 
   public copasPorSubcategoria$!: Observable<{ nombre: string; productos: Producto[] }[]>;
   
