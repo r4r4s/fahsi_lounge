@@ -1,29 +1,16 @@
 footer {
-  
-  position: fixed;
-  bottom: 0;
+  /* No usar position:fixed: dejar que el footer participe en el flujo
+     y usar el layout flex del root para que quede abajo cuando el
+     contenido sea corto o al final si es largo. */
+  position: relative;
   width: 100%;
-  z-index: 1030;
-  transform: translateZ(0); 
-
-  
   background: rgba(27, 84, 49, 0.55);
-  
-  
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  
-  
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-
-  
   box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.2);
-
-  
   padding-top: 1rem;
   padding-bottom: 1rem;
-
-  
   color: #f8f9fa;
   text-align: center;
 }
