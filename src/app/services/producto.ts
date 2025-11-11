@@ -14,9 +14,9 @@ export class ProductoService {
     { id: 1, nombre: 'San Miguel', descripcion: 'Tercio', precio: 3.00, categoria: 'Cerveza' },
     { id: 2, nombre: 'San Miguel', descripcion: 'Doble', precio: 2.50, categoria: 'Cerveza' },
     
-    { id: 5, nombre: 'Gin Tonic (Beefeater)', descripcion: 'Clásico.', precio: 8.00, categoria: 'Copa' },
-    { id: 6, nombre: 'Ron Cola (Barceló)', descripcion: 'El de siempre.', precio: 8.00, categoria: 'Copa' },
-    { id: 7, nombre: 'Whisky (Jameson)', descripcion: 'Solo o con hielo.', precio: 9.00, categoria: 'Copa' },
+    { id: 5, nombre: 'Ballantine’s', descripcion: 'Clásico.', precio: 8.00, categoria: 'Copa' },
+    { id: 6, nombre: 'Red Label', descripcion: 'El de siempre.', precio: 8.00, categoria: 'Copa' },
+    { id: 7, nombre: 'Cutty Sark', descripcion: 'Solo o con hielo.', precio: 9.00, categoria: 'Copa' },
     { id: 8, nombre: 'Mojito', descripcion: 'Fresco y mentolado.', precio: 10.00, categoria: 'Copa' },
     { id: 4, nombre: 'Copa de Vino', descripcion: 'Tinto o blanco.', precio: 6.00, categoria: 'Copa' },
     { id: 5, nombre: 'Copa de Champagne', descripcion: 'Burbujeante.', precio: 12.00, categoria: 'Copa' },
