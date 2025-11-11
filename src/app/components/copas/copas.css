@@ -40,3 +40,11 @@
   letter-spacing: 0.5px;
   font-size: 0.9rem;
 }
+
+.category-row th {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
