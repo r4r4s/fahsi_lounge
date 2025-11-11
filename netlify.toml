@@ -5,7 +5,7 @@
 [[plugins]]
   package = "@netlify/angular-runtime"
 
-# 🔄 Redirección para Single Page Applications (Angular)
+# 🔁 Soporte para rutas Angular (SPA)
 [[redirects]]
   from = "/*"
   to = "/index.html"
