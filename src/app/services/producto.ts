@@ -46,7 +46,7 @@ export class ProductoService {
     { id: 24, nombre: 'Diana', descripcion: '*1€ por persona', precio: 2.00, categoria: 'Juego' },
     { id: 25, nombre: 'Futbolín', descripcion: '', precio: 1.00, categoria: 'Juego' },
     
-  ];
+  
 
 
 
