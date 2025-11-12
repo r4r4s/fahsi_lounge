@@ -225,32 +225,7 @@ export class ProductoService {
     
 
 
-    {
-      id: 20,
-      nombre: 'Mi amor',
-      descripcion: 'Dulce, afrutado y suave',
-      precio: 18.0,
-      categoria: 'Cachimba',
-    },
-    { id: 20, nombre: 'Menta', descripcion: 'Menta fresca', precio: 18.0, categoria: 'Cachimba' },
-    {
-      id: 21,
-      nombre: 'Doble manzana',
-      descripcion: 'Anís y manzana intensa',
-      precio: 18.0,
-      categoria: 'Cachimba',
-    },
-    {
-      id: 22,
-      nombre: 'Regaliz',
-      descripcion: 'Intenso, dulce y especiado',
-      precio: 18.0,
-      categoria: 'Cachimba',
-    },
-
-    { id: 23, nombre: 'Billar', descripcion: '', precio: 2.0, categoria: 'Juego' },
-    { id: 24, nombre: 'Diana', descripcion: '*1€ por persona', precio: 2.0, categoria: 'Juego' },
-    { id: 25, nombre: 'Futbolín', descripcion: '', precio: 1.0, categoria: 'Juego' },
+      
   ];
 
   constructor() {}
