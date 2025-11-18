@@ -1,0 +1,84 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+
+    <a class="navbar-brand d-flex align-items-center" routerLink="/">
+      <img src="assets/image.png" alt="Logo Fahsi Lounge" class="brand-logo me-3">
+
+      <span class="brand-text d-none d-lg-inline">Fahsi Lounge</span>
+
+      </a>
+
+    <button
+      #navbarToggler
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div #navbarNav class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: true}"
+            data-bs-target="#navbarNav"
+            (click)="closeNavbarOnMobile()"
+          >Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/copas"
+            routerLinkActive="active"
+            data-bs-target="#navbarNav"
+            (click)="closeNavbarOnMobile()"
+          >Copas</a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/cervezas"
+            routerLinkActive="active"
+            data-bs-target="#navbarNav"
+            (click)="closeNavbarOnMobile()"
+          >Cervezas</a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/cachimbas"
+            routerLinkActive="active"
+            data-bs-target="#navbarNav"
+            (click)="closeNavbarOnMobile()"
+          >Cachimbas</a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/juegos"
+            routerLinkActive="active"
+            data-bs-target="#navbarNav"
+            (click)="closeNavbarOnMobile()"
+          >Juegos</a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/contacto"
+            routerLinkActive="active"
+            data-bs-target="#navbarNav"
+            (click)="closeNavbarOnMobile()"
+          >Contacto</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
