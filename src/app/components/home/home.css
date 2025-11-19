@@ -1,13 +1,13 @@
 .hero-section {
   
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/assets/home.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/assets/home.webp');
   background-size: cover; 
   background-position: center; 
-  background-attachment: fixed; 
+  background-repeat: no-repeat;
   
   height: 80vh; 
   min-height: 500px; 
-  
+
   display: flex; 
   flex-direction: column; 
   justify-content: center; 
