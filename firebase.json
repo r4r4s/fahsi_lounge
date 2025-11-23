@@ -1,16 +1,11 @@
 {
   "hosting": {
+    "site": "fahsiloungexirivella0",
     "public": "dist/fahsi/browser",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
     ]
   }
 }
