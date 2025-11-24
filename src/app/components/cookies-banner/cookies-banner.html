@@ -1,0 +1,17 @@
+<div class="cookie-card" *ngIf="isVisible()">
+  <div class="cookie-icon">
+    <i class="bi bi-cookie"></i>
+  </div>
+
+  <div class="cookie-copy">
+    <p class="cookie-title">Cookies</p>
+    <p class="cookie-text">
+      Usamos cookies propias para que la web funcione, recordar tus preferencias y medir visitas de forma anónima.
+      Si sigues navegando, asumimos que te parece bien.
+    </p>
+    <div class="cookie-actions">
+      <button type="button" class="btn btn-success btn-sm" (click)="accept()">Aceptar y seguir</button>
+      <button type="button" class="btn btn-outline-light btn-sm" (click)="onlyEssential()">Solo esenciales</button>
+    </div>
+  </div>
+</div>
