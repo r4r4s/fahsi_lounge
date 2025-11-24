@@ -50,7 +50,7 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  font-size: 2.1rem;
+  font-size: 1.6rem;
   pointer-events: none; /* evita bloquear el botón del menú */
 }
 
