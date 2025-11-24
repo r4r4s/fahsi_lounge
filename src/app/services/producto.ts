@@ -225,6 +225,44 @@ export class ProductoService {
     
 
 
+    {
+      id: 30,
+      nombre: 'Nuggets',
+      descripcion: 'Jamón serrano, quesos curados, hummus, aceitunas y pan rústico.',
+      precio: 14.0,
+      categoria: 'Cena',
+      subcategoria: 'Complementos',
+      imagenUrl: 'assets/cena-tabla.svg',
+    },
+    {
+      id: 31,
+      nombre: 'Hamburguesa Fahsi',
+      descripcion: 'Ternera, cheddar, cebolla caramelizada, rúcula y salsa de la casa.',
+      precio: 12.5,
+      categoria: 'Cena',
+      subcategoria: 'Hamburguesas',
+      imagenUrl: 'assets/cena-burger.svg',
+    },
+    {
+      id: 32,
+      nombre: 'Hamburguesa de Pollo Crujiente',
+      descripcion: 'Pechuga crujiente, lechuga fresca, pepinillos y alioli suave.',
+      precio: 9.5,
+      categoria: 'Cena',
+      subcategoria: 'Hamburguesas',
+      imagenUrl: 'assets/cena-wrap.svg',
+    },
+    {
+      id: 33,
+      nombre: 'Patatas',
+      descripcion: 'Pan crujiente con tomate confitado, albahaca fresca y aceite de oliva.',
+      precio: 8.5,
+      categoria: 'Cena',
+      subcategoria: 'Complementos',
+      imagenUrl: 'assets/cena-bruschetta.svg',
+    },
+
+
       
   ];
 

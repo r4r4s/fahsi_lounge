@@ -1,0 +1,34 @@
+<div class="glass-rectangle">
+  <h1 class="section-title mb-3">Cenas</h1>
+  <p class="text-center text-white-50 mb-4">Comparte o disfruta nuestras opciones perfectas para la noche.</p>
+
+  <div *ngIf="cenasPorSubcategoria$ | async as secciones; else loading">
+    <p *ngIf="secciones.length === 0" class="text-center text-white-50">No hay opciones de cena disponibles por ahora.</p>
+
+    <div class="section-group" *ngFor="let seccion of secciones">
+      <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3 section-subheader">
+        <h3 class="mb-0 subsection-title">{{ seccion.nombre }}</h3>
+        <span class="badge bg-light text-dark">{{ seccion.productos.length }} opciones</span>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
+        <div class="col" *ngFor="let cena of seccion.productos; trackBy: trackById">
+          <div class="glass-card dinner-card h-100">
+            <div class="image-wrapper">
+              <img [src]="getImagenUrl(cena)" [alt]="cena.nombre" loading="lazy" />
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold mb-2">{{ cena.nombre }}</h5>
+              <p class="card-text text-white-50 mb-3">{{ cena.descripcion }}</p>
+              <div class="price-tag fw-bold">{{ cena.precio | currency:'EUR' }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #loading>
+    <p class="text-center">Cargando opciones de cena...</p>
+  </ng-template>
+</div>

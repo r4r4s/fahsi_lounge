@@ -3,7 +3,15 @@ export interface Producto {
   nombre: string;
   descripcion: string;
   precio: number;
-  categoria: 'Copa' | 'Cerveza' | 'Cachimba' | 'Juego';
-  subcategoria?: 'Whisky' | 'Gin' | 'Vodka' | 'Ron' | 'Licores' | 'Chupitos';
+  categoria: 'Copa' | 'Cerveza' | 'Cachimba' | 'Juego' | 'Cena';
+  subcategoria?:
+    | 'Whisky'
+    | 'Gin'
+    | 'Vodka'
+    | 'Ron'
+    | 'Licores'
+    | 'Chupitos'
+    | 'Hamburguesas'
+    | 'Complementos';
   imagenUrl?: string;
 }
