@@ -6,6 +6,7 @@ import { CookiesBanner } from './components/cookies-banner/cookies-banner';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   imports: [RouterOutlet, Header, Footer, CookiesBanner],
   templateUrl: './app.html',
   styleUrl: './app.css'
