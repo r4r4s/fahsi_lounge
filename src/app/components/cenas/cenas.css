@@ -17,6 +17,8 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   overflow: hidden;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .glass-card:hover {
@@ -27,6 +29,10 @@
 .dinner-card .card-body {
   padding: 1.25rem;
   color: #f8f9fa;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .dinner-card .card-title {
@@ -82,6 +88,72 @@
   margin-top: 2.25rem;
   padding-top: 1.5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.extras-row {
+  margin-top: 1rem;
+}
+
+.menu-hero {
+  background: linear-gradient(135deg, rgba(255, 111, 97, 0.18), rgba(79, 193, 255, 0.16));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.menu-price {
+  display: inline-block;
+  padding: 0.45rem 1.4rem;
+  background: linear-gradient(135deg, #ff6f61, #ff9a44);
+  color: #1a1d20;
+  border-radius: 999px;
+  font-size: 1.9rem;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  margin-bottom: 0.35rem;
+}
+
+.menu-subcopy {
+  font-size: 0.95rem;
+}
+
+.reservation-link:hover {
+  color: #ff9a44;
+}
+
+.menu-includes {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #f8f9fa;
+}
+
+.menu-includes li {
+  padding: 0.5rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.menu-includes li:first-child {
+  border-top: none;
+}
+
+.image-wrapper {
+  position: relative;
+}
+
+.image-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #f8f9fa;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  letter-spacing: 0.3px;
 }
 
 @media (max-width: 576px) {

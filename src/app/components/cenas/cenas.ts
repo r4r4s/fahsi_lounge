@@ -14,7 +14,7 @@ import { ProductoService } from '../../services/producto';
   styleUrl: './cenas.css'
 })
 export class Cenas implements OnInit {
-  private readonly subcategoriasCena = ['Hamburguesas', 'Complementos'] as const;
+  private readonly subcategoriasCena = ['Hamburguesas'] as const;
 
   public cenasPorSubcategoria$!: Observable<{ nombre: string; productos: Producto[] }[]>;
 
