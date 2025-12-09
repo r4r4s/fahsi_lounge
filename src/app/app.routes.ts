@@ -6,6 +6,7 @@ import { Cervezas} from './components/cervezas/cervezas';
 import { Cachimbas} from './components/cachimbas/cachimbas';
 import { Juegos } from './components/juegos/juegos';
 import { Contacto} from './components/contacto/contacto'; // <-- Importar
+import { Promociones } from './components/promociones/promociones';
 import { Error} from './components/error/error';
 
 export const routes: Routes = [
@@ -17,6 +18,7 @@ export const routes: Routes = [
   { path: 'cervezas', component: Cervezas },
   { path: 'cachimbas', component: Cachimbas },
   { path: 'juegos', component: Juegos },
+  { path: 'promociones', component: Promociones },
   { path: 'contacto', component: Contacto }, 
   { path: '**', component: Error }
 ];
