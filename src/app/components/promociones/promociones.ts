@@ -12,8 +12,8 @@ import { CommonModule } from '@angular/common';
 export class Promociones {
   // Imagenes Oferta
   images: string[] = [
-    'assets/promociones/OfertaCopas.svg',
-    'assets/promociones/OfertaCopasCachimba.svg'
+    'assets/promociones/OfertaCopas.webp',
+    'assets/promociones/OfertaCopasCachimba.webp'
     
   ];
 
